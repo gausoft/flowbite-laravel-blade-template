@@ -14,11 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('admin/pages/dashboard');
-})->name('dashboard');
-
-
-Route::get('/users', function () {
-    return view('admin/pages/users');
-})->name('users');
+Route::get('/', fn() => view('admin/pages/dashboard'))->name('dashboard');
+Route::get('/users', fn() => view('admin/pages/users'))->name('users');
+Route::get('/settings', fn() => view('admin/pages/settings'))->name('settings');
